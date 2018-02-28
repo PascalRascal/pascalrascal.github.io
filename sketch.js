@@ -11,7 +11,6 @@ var sketch = (p) => {
         p.strokeWeight(2);
         p.textSize(64);
         p.textFont('Exo2-Black');
-        p.text("Blaise Marchetti", 600, 600);
         points.forEach((point, i) => {
             let r = Math.pow(i, 4.3);
             let a = r % 5 * Math.pow(Math.sin((i * p.PI / 10) + t), 2);

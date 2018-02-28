@@ -1,4 +1,4 @@
-var sketch = (p) => {
+var sketch = (p:p5) => {
     p.preload = () => {
 
     }
@@ -12,7 +12,6 @@ var sketch = (p) => {
         p.strokeWeight(2)
         p.textSize(64)
         p.textFont('Exo2-Black')
-        p.text("Blaise Marchetti", 600, 600);
 
         points.forEach((point, i) => {
             let r = i ** 4.3;
