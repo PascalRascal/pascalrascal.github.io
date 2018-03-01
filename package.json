@@ -1,14 +1,31 @@
 {
-  "name": "p5-typescript-starter",
+  "name": "empty-example",
   "version": "1.0.0",
-  "description": "Project to quickly get something working in [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/)",
+  "description": "A pretty simple boilerplate for p5js projects to quickly clone and start working on projects.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server  | tsc --watch"
+    "build": "webpack",
+    "watch": "webpack-dev-server"
   },
-  "homepage": "https://github.com/Gaweph/p5-typescript-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buoyantair/p5js-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buoyantair/p5js-boilerplate/issues"
+  },
+  "homepage": "https://github.com/buoyantair/p5js-boilerplate#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "p5": "^0.5.16",
+    "webpack": "^3.10.0"
+  },
   "devDependencies": {
-    "live-server": "^1.2.0",
-    "typescript": "^2.6.2"
+    "babel-preset-env": "^1.6.1",
+    "webpack-dev-server": "^2.9.7"
   }
 }
