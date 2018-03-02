@@ -10,14 +10,14 @@ var sketch = (p) => {
     }
 
     p.mouseClicked = () => {
-        
+        console.log('cliggidy clig xd')
     }
    
     p.setup = () => {
         canvas = p.createCanvas(p.windowWidth, p.windowHeight).canvas;
         let points = [[69, 219], [69, 186], [39, 187], [4, 142], [24, 148], [69, 196], [76, 152], [23, 120], [28, 49], [29, 8], [66, 23], [133, 27], [168, 8], [175, 45], [190, 92], [177, 140], [127, 151], [141, 218]]; 
         github = new Constellation(points)
-        github.scale = 1/2;
+        github.scale = 2;
         console.log(canvas)
     }
    
@@ -44,7 +44,8 @@ var sketch = (p) => {
             }
             T(((t/10) ** (i < 9 ? 2 : 0)) * 300 + i**4.3, a, s, c)
         }
-        github.draw(p, 720, 720);
+        github.setLocation(360, 360)
+        github.draw(p);
     }
 }
  
