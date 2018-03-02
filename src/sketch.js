@@ -1,5 +1,5 @@
 import Constellation from './constellation'
-var canvas, github;
+var canvas, github, resumeConstellation;
 var sketch = (p) => {
     p.preload = () => {
 
@@ -16,8 +16,11 @@ var sketch = (p) => {
     p.setup = () => {
         canvas = p.createCanvas(p.windowWidth, p.windowHeight).canvas;
         let points = [[69, 219], [69, 186], [39, 187], [4, 142], [24, 148], [69, 196], [76, 152], [23, 120], [28, 49], [29, 8], [66, 23], [133, 27], [168, 8], [175, 45], [190, 92], [177, 140], [127, 151], [141, 218]]; 
+        let resumePoints = [[153, 101], [67, 183], [34, 174], [21, 140], [138, 19], [156, 16], [187, 26], [127, 103], [78, 148], [58, 139], [61, 125], [117, 67]]
         github = new Constellation(points)
-        github.scale = 2;
+        github.scale = 1/2;
+        resumeConstellation = new Constellation(resumePoints)
+        resumeConstellation.scale = 1/2
         console.log(canvas)
     }
    
@@ -44,6 +47,8 @@ var sketch = (p) => {
             }
             T(((t/10) ** (i < 9 ? 2 : 0)) * 300 + i**4.3, a, s, c)
         }
+        resumeConstellation.setLocation(720, 360)
+        resumeConstellation.draw(p)
         github.setLocation(360, 360)
         github.draw(p);
     }
