@@ -1,12 +1,14 @@
 import Constellation from './constellation'
 var canvas, github, resumeConstellation;
+var noise;
 var sketch = (p) => {
     p.preload = () => {
 
     }
     let T = (w,s,a,c) => {
         p.fill(a,a,a,a)
-        c.fillRect((w*2)%p.width, w%p.height, s, s )
+
+        c.fillRect((w*noise)%p.width, w%p.height, s, s )
     }
 
     p.mouseClicked = () => {
@@ -15,26 +17,29 @@ var sketch = (p) => {
    
     p.setup = () => {
         canvas = p.createCanvas(p.windowWidth, p.windowHeight).canvas;
-        let points = [[69, 219], [69, 186], [39, 187], [4, 142], [24, 148], [69, 196], [76, 152], [23, 120], [28, 49], [29, 8], [66, 23], [133, 27], [168, 8], [175, 45], [190, 92], [177, 140], [127, 151], [141, 218]]; 
+        let githubPoints = [[69, 219], [69, 186], [39, 187], [4, 142], [24, 148], [69, 196], [76, 152], [23, 120], [28, 49], [29, 8], [66, 23], [133, 27], [168, 8], [175, 45], [190, 92], [177, 140], [127, 151], [141, 218]]; 
         let resumePoints = [[153, 101], [67, 183], [34, 174], [21, 140], [138, 19], [156, 16], [187, 26], [127, 103], [78, 148], [58, 139], [61, 125], [117, 67]]
-        github = new Constellation(points)
+        github = new Constellation(githubPoints)
         github.scale = 1/2;
         resumeConstellation = new Constellation(resumePoints)
         resumeConstellation.scale = 1/2
+        noise = p.random(1, 5)
         console.log(canvas)
+        sketch.foo = "fug"
+        console.log(sketch.foo)
+        sketch.centerPoint = [p.windowWidth / 2, p.windowHeight / 2]
     }
    
     p.windowResized = () => {
+        noise = p.random(1, 5)
+        sketch.centerPoint = [p.windowWidth / 2, p.windowHeight / 2]
         p.resizeCanvas(p.windowWidth, p.windowHeight);
     }
    
-    //demo vars
-    let positionX = 10;
-    let positionY = 10;
-    let cubeSize = 50;
     
     //TODO: Vary star count base don screen size
     p.draw = () => {
+        let cp = sketch.centerPoint;
         let c = canvas.getContext("2d");
         let t = p.millis() / 1000 * (1/4);
         p.background('black')
@@ -47,9 +52,9 @@ var sketch = (p) => {
             }
             T(((t/10) ** (i < 9 ? 2 : 0)) * 300 + i**4.3, a, s, c)
         }
-        resumeConstellation.setLocation(720, 360)
+        resumeConstellation.setLocation(cp[0] - 180, cp[1])
         resumeConstellation.draw(p)
-        github.setLocation(360, 360)
+        github.setLocation(cp[0] + 180, cp[1])
         github.draw(p);
     }
 }
