@@ -29,6 +29,14 @@ class Constellation{
         this.y = 0;
     }
 
+    getWidth() {
+        return this.scale * (this.boundingPoints[1] - this.boundingPoints[0])
+    }
+
+    getHeight() {
+        return this.scale * (this.boundingPoints[3] - this.boundingPoints[2])
+    }
+
     /**
      * Gets the 4 points used to construct the bounding rectangle for this constellation
      * @returns {number[]} [minX, maxX, minY, maxY]
@@ -106,5 +114,12 @@ class Constellation{
     }
 }
 
+class TextConstellation extends Constellation {
+    constructor(text, font){
+        let points = font.textToPoints(text, 0, 0, 50)
+        super(points)
+    }
+}
 
-export default Constellation
+
+export {Constellation, TextConstellation}

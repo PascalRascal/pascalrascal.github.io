@@ -1,6 +1,7 @@
-import Constellation from './constellation'
-var canvas, github, resumeConstellation;
+import {Constellation, TextConstellation} from './constellation'
+var canvas, github, resumeConstellation, nameConstellation;
 var noise;
+
 var sketch = (p) => {
     p.preload = () => {
 
@@ -23,6 +24,7 @@ var sketch = (p) => {
         github.scale = 1/2;
         resumeConstellation = new Constellation(resumePoints)
         resumeConstellation.scale = 1/2
+
         noise = p.random(1, 5)
         console.log(canvas)
         sketch.foo = "fug"
@@ -52,9 +54,21 @@ var sketch = (p) => {
             }
             T(((t/10) ** (i < 9 ? 2 : 0)) * 300 + i**4.3, a, s, c)
         }
+        /**
+         * Set up Font Details
+         */
+        p.fill(255, 255, 255, 160)
+
+        p.textSize(50)
+        p.textFont('Exo 2')
+
+        let nameWidth = p.textWidth('Blaise Marchetti')
+        p.text('Blaise Marchetti', cp[0] - nameWidth/2, cp[1] - 70)
+        
+
         resumeConstellation.setLocation(cp[0] - 180, cp[1])
         resumeConstellation.draw(p)
-        github.setLocation(cp[0] + 180, cp[1])
+        github.setLocation((cp[0] + 180) - (github.getWidth()), cp[1])
         github.draw(p);
     }
 }
