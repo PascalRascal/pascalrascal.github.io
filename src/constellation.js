@@ -96,8 +96,8 @@ class Constellation{
             let s = 51 * a;
             a = r % 3 * Math.sin(t) ** 2 + 1
             s = 51 * a;
-            p.stroke(s, s, s, s);
-            p.fill(s,s,s,s)
+            p.stroke(s + 15, s + 15, s + 15, s + 15);
+            p.fill(s + 25,s + 25,s + 25,s + 25)
 
             // Transform the location of the points
             let p1 = point[0]*this.scale + x;

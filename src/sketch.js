@@ -57,13 +57,21 @@ var sketch = (p) => {
         /**
          * Set up Font Details
          */
-        p.fill(255, 255, 255, 160)
+        p.fill(150, 150, 150, 150)
 
-        p.textSize(50)
-        p.textFont('Exo 2')
+        p.textSize(64)
+        p.textFont('Raleway')
+        p.textStyle(p.NORMAL)
 
         let nameWidth = p.textWidth('Blaise Marchetti')
         p.text('Blaise Marchetti', cp[0] - nameWidth/2, cp[1] - 70)
+
+        p.fill(100, 100, 255, 150)
+        p.textStyle(p.BOLD)
+        p.textSize(22)
+        let emailWidth = p.textWidth('marchetti.14@osu.edu')
+        p.text('marchetti.14@osu.edu', cp[0] - emailWidth/2, cp[1] - 30)
+
         
 
         resumeConstellation.setLocation(cp[0] - 180, cp[1])
