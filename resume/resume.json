@@ -1,0 +1,104 @@
+{
+  "basics": {
+    "name": "Blaise Marchetti",
+    "label": "Software Developer",
+    "picture": "",
+    "email": "thepascalrascal@gmail.com",
+    "phone": "(614) 561-0251",
+    "website": "http://pascalrascal.github.io",
+    "summary": "Builder, B.Sc in Computer Science & Engineering, Currently at Amazon",
+    "location": {
+      "address": "301 Minor Avenue",
+      "postalCode": "WA 98109",
+      "city": "Seattle",
+      "countryCode": "US",
+      "region": "Washington"
+    },
+    "profiles": [{
+      "network": "Twitter",
+      "username": "ThePascalRascal",
+      "url": "https://twitter.com/ThePascalRascal"
+    }]
+  },
+  "work": [{
+    "company": "Amazon",
+    "position": "Software Developer Engineer",
+    "website": "https://aws.amazon.com",
+    "startDate": "2019-02-11",
+    "summary": "SDE at AWS Marketing"
+  },
+  {
+    "company": "State Auto",
+    "position": "Intern in Strategic Rsearch",
+    "website": "https://stateauto.com",
+    "startDate": "2017-05",
+    "endDate": "2017-08",
+    "summary": "Worked on Chatbot interface for support agents"
+  },
+  {
+    "company": "Independent Contractor",
+    "position": "Developer",
+    "startDate": "2017-02",
+    "endDate": "2017-06",
+    "summary": "Built WebVR experience for resort"
+  }
+],
+  "education": [{
+    "institution": "The Ohio State University",
+    "area": "Computer Science and Engineering",
+    "studyType": "Bachelor of Science",
+    "startDate": "2015-08",
+    "endDate": "2018-12",
+    "minors": [
+        "Astronomy and Astrophysics"
+    ]
+  }],
+  "awards": [
+    {
+        "title": "1st Place",
+        "date": "2017-4-17",
+        "awarder": "Virtuleap WebVR Hackathon",
+        "summary": "Built Paint the World, a cooperative VR painting app"
+    },
+    {
+    "title": "1st Place",
+    "date": "2016-4-17",
+    "awarder": "Uncommon Hacks 2016",
+    "summary": "Built EzKeZe, a privacy-oriented chrome extension to encrypt any chat conversation"
+    }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ]
+  }],
+  "languages": [{
+    "language": "English",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "Artificial Intelligence",
+    "keywords": [
+      "Deep Learning",
+      "Geometric Deep Learning"
+    ]
+  },
+  {
+    "name": "Virtual Reality",
+    "keywords": [
+      "WebVR"
+    ]
+  },
+  {
+    "name": "Decentralized Solutions",
+    "keywords": [
+      "Blockchain",
+      "Distributed Ledger",
+      "Ethereum"
+    ]
+  }
+]
+}
