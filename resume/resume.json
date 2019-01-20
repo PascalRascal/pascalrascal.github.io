@@ -31,24 +31,24 @@
     "company": "State Auto",
     "position": "Intern in Strategic Rsearch",
     "website": "https://stateauto.com",
-    "startDate": "2017-05",
-    "endDate": "2017-08",
+    "startDate": "2017-05-07",
+    "endDate": "2017-08-05",
     "summary": "Worked on Chatbot interface for support agents"
   },
   {
     "company": "Independent Contractor",
     "position": "Developer",
-    "startDate": "2017-02",
-    "endDate": "2017-06",
-    "summary": "Built WebVR experience for resort"
+    "startDate": "2017-03-11",
+    "endDate": "2017-06-08",
+    "summary": "Built WebVR experience for Baha Mar Resort"
   }
 ],
   "education": [{
     "institution": "The Ohio State University",
     "area": "Computer Science and Engineering",
     "studyType": "Bachelor of Science",
-    "startDate": "2015-08",
-    "endDate": "2018-12",
+    "startDate": "2015-08-11",
+    "endDate": "2018-12-10",
     "minors": [
         "Astronomy and Astrophysics"
     ]
@@ -56,13 +56,13 @@
   "awards": [
     {
         "title": "1st Place",
-        "date": "2017-4-17",
+        "date": "2017-02-15",
         "awarder": "Virtuleap WebVR Hackathon",
         "summary": "Built Paint the World, a cooperative VR painting app"
     },
     {
     "title": "1st Place",
-    "date": "2016-4-17",
+    "date": "2016-04-17",
     "awarder": "Uncommon Hacks 2016",
     "summary": "Built EzKeZe, a privacy-oriented chrome extension to encrypt any chat conversation"
     }],
